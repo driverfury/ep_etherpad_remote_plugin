@@ -1,10 +1,10 @@
 exports.postToolbarInit = function(hook_name, context, callback) {
     var etherpad_remote_url = 'http://127.0.0.1/etherpad-remote/public';
 
-    var $btn = $('#epTestButton');
+    var $btn = $('#epRemoteSaveButton');
 
     $btn.click(function() {
-        var btn = $('#epTestButton');
+        var btn = $('#epRemoteSaveButton');
         btn.prop('disabled', true);
 
         var pad_id = document.location.pathname.substring(document.location.pathname.lastIndexOf('/') + 1);
