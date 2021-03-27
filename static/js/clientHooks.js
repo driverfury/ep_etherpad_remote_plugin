@@ -1,14 +1,17 @@
 exports.postToolbarInit = function(hook_name, context, callback) {
+    var etherpad_remote_url = 'http://127.0.0.1/etherpad-remote/public';
+
     var $btn = $('#epTestButton');
 
     $btn.click(function() {
         var btn = $('#epTestButton');
         btn.prop('disabled', true);
 
-        var pad_id = 'test_pad';
+        var pad_id = document.location.pathname.substring(document.location.pathname.lastIndexOf('/') + 1);
+        pad_id = decodeURIComponent(pad_id);
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://127.0.0.1/collab-edit/public/api/fake/save/' + pad_id, true);
+        xhr.open('POST', etherpad_remote_url + '/api/save/' + pad_id, true);
 
         xhr.onreadystatechange = function() {
             if (this.readyState === XMLHttpRequest.DONE) {

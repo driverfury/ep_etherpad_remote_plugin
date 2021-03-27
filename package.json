@@ -2,13 +2,13 @@
   "name": "ep_etherpad_remote_plugin",
   "version": "0.0.1",
   "description": "Plugin for etherpad remote",
-  "author": "driverfury <yo@driverfury.com> (driverfury)",
+  "author": "driverfury",
   "contributors": [],
   "dependencies": {},
   "engines": {
     "node": ">= 10.13.0"
   },
-  "main": "serverHooks.js",
+  "main": "clientHooks.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
