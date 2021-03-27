@@ -1,0 +1,14 @@
+{
+  "parts": [
+    {
+      "name": "ep_etherpad_remote_plugin",
+      "client_hooks": {
+        "postToolbarInit": "ep_etherpad_remote_plugin/static/js/clientHooks"
+      },
+      "hooks": {
+        "padInitToolbar": "ep_etherpad_remote_plugin/serverHooks",
+        "eejsBlock_editbarMenuRight": "ep_etherpad_remote_plugin/serverHooks"
+      }
+    }
+  ]
+}
